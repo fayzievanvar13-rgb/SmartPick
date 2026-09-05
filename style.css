@@ -952,3 +952,205 @@ footer {
 .order-details summary {
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+/* =========================
+   АКЦИИ
+========================= */
+
+.promo-toggle {
+    display: none;
+}
+
+
+/* КНОПКА */
+
+.promo-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ff9800;
+    color: white;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.promo-button:hover {
+    background: #f57c00;
+    transform: translateY(-2px);
+}
+
+
+/* ЗАТЕМНЕНИЕ */
+
+.promo-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 9999;
+}
+
+
+/* ОКНО */
+
+.promo-window {
+    position: relative;
+
+    width: 420px;
+    max-width: 90%;
+
+    padding: 35px 25px;
+
+    background: white;
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+    transform: scale(0.8);
+    transition: 0.3s;
+}
+
+
+/* ОТКРЫТИЕ ОКНА */
+
+.promo-toggle:checked ~ .promo-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.promo-toggle:checked ~ .promo-overlay .promo-window {
+    transform: scale(1);
+}
+
+
+/* КРЕСТИК */
+
+.close-promo {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #eeeeee;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.close-promo:hover {
+    background: #dddddd;
+}
+
+
+/* ПОДАРОК */
+
+.promo-icon {
+    font-size: 60px;
+}
+
+.promo-gift {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+
+/* ТЕКСТ */
+
+.promo-label {
+    margin-top: 10px;
+
+    color: #ff9800;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.promo-window h2 {
+    margin: 10px 0;
+
+    font-size: 30px;
+}
+
+.promo-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.promo-main strong {
+    color: #ff9800;
+}
+
+
+/* ОСТАЛОСЬ МЕСТ */
+
+.promo-spots {
+    margin: 20px 0;
+
+    padding: 12px;
+
+    background: #fff3e0;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+
+/* КНОПКА */
+
+.promo-action {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #ff9800;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.promo-action:hover {
+    background: #f57c00;
+    transform: translateY(-2px);
+}
