@@ -1154,3 +1154,220 @@ footer {
     background: #f57c00;
     transform: translateY(-2px);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   ПРИВЕДИ ДРУГА
+========================= */
+
+.friend-toggle {
+    display: none;
+}
+
+
+/* КНОПКА */
+
+.friend-button {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background: #6c63ff;
+    color: white;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.friend-button:hover {
+    background: #574fd6;
+    transform: translateY(-2px);
+}
+
+
+/* ЗАТЕМНЕНИЕ */
+
+.friend-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 10000;
+}
+
+
+/* ОКНО */
+
+.friend-window {
+    position: relative;
+
+    width: 420px;
+    max-width: 90%;
+
+    padding: 35px 25px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+    transform: scale(0.8);
+
+    transition: 0.3s;
+}
+
+
+/* ОТКРЫТИЕ */
+
+.friend-toggle:checked ~ .friend-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.friend-toggle:checked ~ .friend-overlay .friend-window {
+    transform: scale(1);
+}
+
+
+/* КРЕСТИК */
+
+.close-friend {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #eeeeee;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ИКОНКИ */
+
+.friend-icon {
+    font-size: 60px;
+}
+
+.friend-bonus {
+    font-size: 55px;
+
+    margin: 15px 0;
+}
+
+
+/* ТЕКСТ */
+
+.friend-label {
+    color: #6c63ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.friend-window h2 {
+    font-size: 30px;
+
+    margin: 10px 0;
+}
+
+.friend-main {
+    font-size: 18px;
+
+    line-height: 1.5;
+}
+
+.friend-main strong {
+    color: #6c63ff;
+}
+
+
+/* ИНФОРМАЦИЯ */
+
+.friend-info {
+    margin: 20px 0;
+
+    padding: 15px;
+
+    background: #f1f0ff;
+
+    border-radius: 15px;
+
+    line-height: 2;
+
+    font-weight: 600;
+}
+
+
+/* КНОПКА */
+
+.friend-action {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #6c63ff;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.friend-action:hover {
+    background: #574fd6;
+
+    transform: translateY(-2px);
+}
