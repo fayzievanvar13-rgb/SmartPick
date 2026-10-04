@@ -1740,3 +1740,286 @@ footer {
         padding: 14px 20px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   SMARTPICK PRISMA HERO
+========================================== */
+
+.prisma-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    overflow: hidden;
+    background: #050505;
+    border-radius: 0;
+}
+
+
+/* Фоновое видео */
+
+.prisma-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* Затемнение видео */
+
+.prisma-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.05) 40%,
+            rgba(0, 0, 0, 0.75)
+        );
+}
+
+
+/* Лёгкий шум */
+
+.prisma-hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    opacity: 0.12;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+}
+
+
+/* Верхнее меню */
+
+.prisma-nav {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 10px 25px 13px;
+
+    background: #050505;
+
+    border-radius: 0 0 22px 22px;
+
+    white-space: nowrap;
+}
+
+
+.prisma-nav a {
+    color: rgba(225, 224, 204, 0.8);
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+
+.prisma-nav a:hover {
+    color: #ffffff;
+}
+
+
+/* Контент */
+
+.prisma-content {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: end;
+
+    gap: 40px;
+
+    padding: 0 40px 25px;
+}
+
+
+/* Большой SMARTPICK */
+
+.prisma-title {
+    order: 1;
+
+    margin: 0;
+
+    color: #e1e0cc;
+
+    font-size: clamp(80px, 16vw, 250px);
+
+    font-weight: 500;
+
+    line-height: 0.78;
+
+    letter-spacing: -0.08em;
+
+    white-space: nowrap;
+}
+
+
+.prisma-title span {
+    color: #00e5d4;
+}
+
+
+/* Описание */
+
+.prisma-description {
+    order: 2;
+
+    max-width: 430px;
+
+    padding-bottom: 15px;
+}
+
+
+.prisma-description p {
+    margin: 0 0 22px;
+
+    color: rgba(225, 224, 204, 0.75);
+
+    font-size: 15px;
+
+    line-height: 1.4;
+}
+
+
+/* Кнопка */
+
+.prisma-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 5px 6px 5px 20px;
+
+    border-radius: 50px;
+
+    background: #00e5d4;
+
+    color: #000;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.prisma-button span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #050505;
+
+    color: #e1e0cc;
+
+    transition: 0.3s;
+}
+
+
+.prisma-button:hover {
+    gap: 20px;
+}
+
+
+.prisma-button:hover span {
+    transform: scale(1.1);
+}
+
+
+/* Мобильная версия */
+
+@media (max-width: 800px) {
+
+    .prisma-nav {
+        gap: 10px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .prisma-nav a {
+        font-size: 10px;
+    }
+
+    .prisma-content {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 0 20px 25px;
+    }
+
+    .prisma-description {
+        order: 1;
+
+        max-width: 350px;
+    }
+
+    .prisma-title {
+        order: 2;
+
+        font-size: 21vw;
+    }
+
+}

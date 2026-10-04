@@ -51,32 +51,58 @@
     </header>
 
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
-    <section class="hero" id="home">
+<section class="hero prisma-hero" id="home">
 
-        <div class="hero-content">
+    <!-- Фоновое видео -->
+    <video
+        class="prisma-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4">
+    </video>
 
-            <p class="small-title">
-                SMARTPICK ONLINE STORE
+    <!-- Затемнение -->
+    <div class="prisma-overlay"></div>
+
+    <!-- Верхнее меню -->
+    <nav class="prisma-nav">
+
+        <a href="#home">Главная</a>
+        <a href="#products">Услуги</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
+
+    </nav>
+
+
+    <!-- Содержимое -->
+    <div class="prisma-content">
+
+        <div class="prisma-description">
+
+            <p>
+                SMARTPICK — цифровой магазин услуг,
+                где дизайн, IT и творчество помогают
+                воплощать твои идеи.
             </p>
 
-            <h1>
-                Покупай умно.<br>
-                <span>Выбирай лучше.</span>
-            </h1>
-
-            <p class="hero-text">
-                Современные товары для дома, работы
-                и повседневной жизни — в одном месте.
-            </p>
-
-            <a href="#products" class="hero-button">
-                Смотреть товары ↓
+            <a href="#products" class="prisma-button">
+                Смотреть услуги
+                <span>→</span>
             </a>
 
         </div>
 
-    </section>
+
+        <h1 class="prisma-title">
+            SMART<span>PICK</span>
+        </h1>
+
+    </div>
+
+</section>
 
 
     <!-- ТОВАРЫ -->
